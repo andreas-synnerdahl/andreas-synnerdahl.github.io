@@ -14,6 +14,8 @@ const height = 20;
 const rows = 40;
 const columns = 40;
 
+const growth = 1;
+
 // Ändrar storleken på vår canvas
 c.height = rows * height;
 c.width = columns * width;
@@ -98,7 +100,7 @@ function moveSnake()
 
     if (x == foodX && y == foodY)
     {
-        length = length +5;
+        length = length + growth;
          foodY = getRndInteger(rows);
          foodX = getRndInteger(columns);
     }
